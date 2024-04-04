@@ -19,7 +19,6 @@ public class EventHandlerArrow implements Listener {
     public void eventHandler(ProjectileLaunchEvent event) {
         if (event.getEntityType() == EntityType.ARROW && event.getEntity().getShooter() instanceof Player) {
             projectile = event.getEntity();
-//&& event.getEntity().getShooter().equals(shoter)
             if (arrowRideEnabled) {
                 projectile.setPassenger(shoter);
                 shoter.setInvisible(true);
@@ -31,7 +30,6 @@ public class EventHandlerArrow implements Listener {
     @EventHandler
     public void eventHandlerArrowHit(ProjectileHitEvent event) {
         if (event.getEntityType() == EntityType.ARROW && event.getEntity().getShooter() instanceof Player) {
-//            Player shoter = (Player) event.getEntity().getShooter();
             if (shoter != null) {
                 shoter.setInvisible(false);
             }

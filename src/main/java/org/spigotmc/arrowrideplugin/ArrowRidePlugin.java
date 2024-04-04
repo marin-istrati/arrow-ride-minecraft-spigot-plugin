@@ -15,12 +15,5 @@ public final class ArrowRidePlugin extends JavaPlugin implements Listener {
     public void onEnable() {
      getServer().getLogger().info("Plugin is now running");
         getServer().getPluginManager().registerEvents(new EventHandlerArrow(),this);
-
     }
-
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
-    }
-
 }
