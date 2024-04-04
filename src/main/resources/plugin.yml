@@ -1,0 +1,4 @@
+name: ArrowRidePlugin
+version: '${project.version}'
+main: org.spigotmc.arrowrideplugin.ArrowRidePlugin
+api-version: '1.18'
