@@ -9,11 +9,9 @@ import org.bukkit.event.player.PlayerToggleSneakEvent;
 import org.spigotmc.event.entity.EntityDismountEvent;
 
 public class EventHandlerArrow implements Listener {
-
     private Player shoter;
     private Projectile projectile = null;
     private boolean arrowRideEnabled = false;
-
 
     @EventHandler
     public void eventHandler(ProjectileLaunchEvent event) {
@@ -25,7 +23,6 @@ public class EventHandlerArrow implements Listener {
             }
         }
     }
-
 
     @EventHandler
     public void eventHandlerArrowHit(ProjectileHitEvent event) {
@@ -41,22 +38,18 @@ public class EventHandlerArrow implements Listener {
 
     @EventHandler
     public void playerSneakEventHandler(PlayerToggleSneakEvent event) {
-
         if (!event.isSneaking()) {
             arrowRideEnabled = !arrowRideEnabled;
             if (arrowRideEnabled) {
                 if (shoter == null) {
                     shoter = event.getPlayer();
                 }
+
                 shoter.sendMessage("Arrow riding enabled");
-
             } else {
-
                 shoter.sendMessage("Arrow riding disabled");
-
             }
         }
-
     }
 }
 
